@@ -1,0 +1,142 @@
+/* Import Fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merienda&family=Nova+Slim&display=swap');
+
+
+/* Import Icons. */
+@import url('https://css.gg/css');
+
+/* Variables. */
+
+:root {
+    /* Fonts. */
+    --font-title: 3rem 'Merienda', cursive;
+    --font-subtitle: 2rem 'Nova Slim', cursive;
+    --font-body: 1.2rem 'Libre Baskerville', serif;
+
+    /* Colors. */
+    --color-rose: #f72585;
+    --color-grape: #7209b7;
+    --color-zafre: #3a0ca3;
+    --color-blue: #4361ee;
+    --color-sky: #4cc9f0;
+
+    /* Transition. */
+    --transition: all cubic-bezier(1, 0, 0, 1) .5s;
+    --transition-short: all cubic-bezier(1, 0, 0, 1) .1s;
+}
+
+/* General. */
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-size: 1.1rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: block;
+    font: var(--font-body);
+}
+
+
+header {
+    height: 25%;
+
+    color: white;
+    background-color: var(--color-zafre);
+
+    display: grid;
+    place-items: center;
+}
+
+header h1 {
+    font: var(--font-title);
+}
+
+main {
+    height: 75%;
+
+    background-color: var(--color-zafre);
+    color: white;
+
+    display: grid;
+    place-items: center;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+
+    column-gap: 3rem;
+    row-gap: 3rem;
+}
+
+form label {
+    font: var(--font-subtitle);
+    font-size: 1.2rem;
+}
+
+form input {
+    border: none;
+    border-radius: .5rem;
+    height: 2rem;
+    margin: .5rem;
+    padding: 1rem;
+}
+
+form input:focus {
+    outline: none;
+    border: .2rem solid var(--color-rose);
+}
+
+form .button {
+    grid-column-end: span 2;
+
+    height: 5rem;
+    margin: 1rem;
+
+    cursor: pointer;
+
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    transition: var(--transition-short);
+
+    border: none;
+    border-radius: 60px;
+    background: #3a0ca3;
+    box-shadow: 20px 20px 40px #2e0a82,
+        -20px -20px 40px #460ec4,
+        inset 0 0 0 #2e0a82,
+        inset 0 0 0 #460ec4;
+}
+
+form .button:hover {
+    transform: scale(1.1);
+}
+
+form .button:active {
+    box-shadow: 0 0 0 #2e0a82,
+        0 0 0 #460ec4,
+        inset 20px 20px 40px #2e0a82,
+        inset -20px -20px 40px #460ec4;
+}
+
+form .button:focus {
+    border: none;
+}
