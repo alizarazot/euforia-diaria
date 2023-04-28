@@ -71,6 +71,11 @@ body {
   font-size: calc(9vw);
 }
 
+.header .title img {
+  height: 10rem;
+  width: auto;
+}
+
 .header .cite {
   margin: 0 1rem 0 1rem;
 }
